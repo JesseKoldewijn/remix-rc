@@ -8,8 +8,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
   return (
     <>
       <Header />
-      <main className="min-h-[90svh]">{children}</main>
-      <main className="min-h-[90svh]">{children}</main>
+      <main className="flex min-h-[90svh]">{children}</main>
     </>
   );
 };

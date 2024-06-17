@@ -21,8 +21,8 @@
     "@remix-run/serve": "^2.9.2",
     "class-variance-authority": "^0.7.0",
     "isbot": "4",
-    "react": "19.0.0-rc-dfd30974ab-20240613",
-    "react-dom": "19.0.0-rc-dfd30974ab-20240613",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
     "tailwindcss-animate": "^1.0.7",
     "vite-plugin-babel": "^1.2.0"
   },

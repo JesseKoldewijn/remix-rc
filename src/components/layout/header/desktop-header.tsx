@@ -9,7 +9,7 @@ import React from "react";
 const DesktopHeader = () => {
   return (
     <header className="w-full bg-gray-900 py-4 shadow-lg">
-      <div className="container relative mx-auto flex items-center justify-between px-6">
+      <div className="container relative mx-auto flex max-w-7xl items-center justify-between px-6">
         <Link className="flex items-center" to="#">
           <MountainIcon className="h-8 w-8 text-white" />
           <span className="ml-2 text-lg font-bold text-white">Acme Inc.</span>
@@ -21,10 +21,9 @@ const DesktopHeader = () => {
 };
 export default DesktopHeader;
 
-function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
+const MountainIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -34,8 +33,9 @@ function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      {...props}
     >
       <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   );
-}
+};

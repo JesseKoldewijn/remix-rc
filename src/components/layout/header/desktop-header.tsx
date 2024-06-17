@@ -11,7 +11,7 @@ const DesktopHeader = () => {
     <header className="w-full bg-zinc-950 py-4 shadow-lg">
       <div className="container relative mx-auto flex max-w-7xl items-center justify-between px-6">
         <Link className="flex items-center" to="#">
-          <MountainIcon className="h-8 w-8 text-white" />
+          <MountainIcon className="h-8 w-8 text-cyan-400" />
           <span className="ml-2 text-lg font-bold text-white">Acme Inc.</span>
         </Link>
         <nav className="flex">nav</nav>

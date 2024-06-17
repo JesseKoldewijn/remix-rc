@@ -8,7 +8,7 @@ import React from "react";
 
 const DesktopHeader = () => {
   return (
-    <header className="w-full bg-gray-900 py-4 shadow-lg">
+    <header className="w-full bg-zinc-950 py-4 shadow-lg">
       <div className="container relative mx-auto flex max-w-7xl items-center justify-between px-6">
         <Link className="flex items-center" to="#">
           <MountainIcon className="h-8 w-8 text-white" />

@@ -28,7 +28,7 @@ const PageBanner = ({ title, subtitle, cta }: PageBannerProps) => {
           {cta.first && (
             <a
               href={cta.first.href}
-              className="rounded-md bg-amber-400 px-4 py-2 font-medium text-background hover:bg-green-400"
+              className="rounded-md bg-amber-400 px-4 py-2 font-medium text-background hover:bg-cyan-400"
             >
               {cta.first.text}
             </a>

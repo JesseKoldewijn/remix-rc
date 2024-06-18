@@ -1,4 +1,3 @@
-import { LoaderFunctionArgs } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
 import { ItemLister } from "~/components/item-lister";
@@ -19,8 +18,8 @@ const ListerFull = () => {
   const { props } = useLoaderData<typeof loader>();
 
   return (
-    <div className="relative mx-auto flex h-full max-w-7xl flex-col">
-      <div className="flex flex-col md:mx-auto md:px-6">
+    <div className="mx-auto flex h-full max-w-7xl flex-col">
+      <div className="flex min-h-screen flex-col md:mx-auto md:px-6">
         <PageBanner
           title={
             <>
@@ -42,7 +41,7 @@ const ListerFull = () => {
           }}
         />
       </div>
-      <div className="flex min-h-screen w-full items-center justify-center">
+      <div className="flex h-full min-h-screen w-full items-start justify-center">
         {props.listerData ? (
           <ItemLister products={props.listerData} />
         ) : (

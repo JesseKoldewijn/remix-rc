@@ -13,7 +13,7 @@ const structure = {
     },
   },
   description: "Some description",
-  category: "Some category",
+  category: [] as ("Clothing" | "Accessories" | "Home")[],
   rating: 5,
 };
 
@@ -36,6 +36,12 @@ export const generateListerData = (count = 10) => {
             alt: `Image ${i}`,
           },
         };
+      } else if (key === "category") {
+        const allKeys = ["Clothing", "Accessories", "Home"];
+        const random = Math.floor(Math.random() * allKeys.length) + 1;
+        const randomValues = allKeys.slice(0, random);
+        const randomIndex = Math.floor(Math.random() * randomValues.length);
+        item[key] = randomValues[randomIndex];
       } else if (key === "price") {
         item[key] = Math.floor(Math.random() * 1000) + 1;
       } else if (key === "rating") {
@@ -44,6 +50,7 @@ export const generateListerData = (count = 10) => {
         item[key] = `${structure[key as keyof typeof structure]} ${i}`;
       }
     }
+    data.push(item as ListerData);
   }
   return data;
 };

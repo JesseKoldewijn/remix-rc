@@ -18,20 +18,24 @@ import { Checkbox } from "~/components/ui/checkbox";
 import { Label } from "~/components/ui/label";
 import { ListerData } from "~/data/lister-data";
 
+import { Slider } from "./ui/slider";
+
 export function ItemLister({ products }: { products: ListerData[] }) {
   const [selectedFilters, setSelectedFilters] = useState({
     category: [],
-    price: { min: 0, max: 1000 },
+    price: { current: 0, min: 0, max: 1000 },
   } as {
     category: string[];
-    price: { min: number; max: number };
+    price: { current: number; min: number; max: number };
   });
 
   const filteredProducts = () => {
     return products.filter((product) => {
       if (
         selectedFilters.category.length > 0 &&
-        !selectedFilters.category.includes(product.category)
+        !selectedFilters.category.some((x) => {
+          return product.category.includes(x as ListerData["category"][number]);
+        })
       ) {
         return false;
       }
@@ -61,6 +65,7 @@ export function ItemLister({ products }: { products: ListerData[] }) {
       });
     }
   };
+
   return (
     <div className="grid gap-8 p-4 md:grid-cols-[280px_1fr] md:p-8">
       <div className="flex flex-col gap-8">
@@ -104,10 +109,21 @@ export function ItemLister({ products }: { products: ListerData[] }) {
             </AccordionTrigger>
             <AccordionContent>
               <div className="grid gap-4">
-                <div />
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>${selectedFilters.price.min}</span>
-                  <span>${selectedFilters.price.max}</span>
+                  <Slider
+                    defaultValue={[selectedFilters.price.current]}
+                    min={selectedFilters.price.min}
+                    max={selectedFilters.price.max}
+                    onClick={(e) => {
+                      const t = e.target as HTMLInputElement;
+
+                      handleFilterChange("price", {
+                        current: parseInt(t.ariaValueNow || "0"),
+                        min: selectedFilters.price.min,
+                        max: selectedFilters.price.max,
+                      });
+                    }}
+                  />
                 </div>
               </div>
             </AccordionContent>

@@ -20,6 +20,9 @@ dependencies:
   '@radix-ui/react-navigation-menu':
     specifier: 1.2.0-rc.6
     version: 1.2.0-rc.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-107a2f8c3e-20240617)(react@19.0.0-rc-107a2f8c3e-20240617)
+  '@radix-ui/react-slider':
+    specifier: 1.2.0-rc.9
+    version: 1.2.0-rc.9(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-107a2f8c3e-20240617)(react@19.0.0-rc-107a2f8c3e-20240617)
   '@radix-ui/react-slot':
     specifier: 1.1.0-rc.6
     version: 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
@@ -1111,6 +1114,10 @@ packages:
     requiresBuild: true
     optional: true
 
+  /@radix-ui/number@1.1.0-rc.6:
+    resolution: {integrity: sha512-JhrPfhLCOZM8jUtsTR3cDvrm1Op9UZD6/mG6RE2bIj1+go/gGUtSaJuF0KsN8p9loBZkM0na7KOGherKxy16EQ==}
+    dev: false
+
   /@radix-ui/primitive@1.1.0-rc.6:
     resolution: {integrity: sha512-npVN3RUkSsu6r91nv4k423oo1tYkWo759rezA3EUrpDr+kFJaQ8u7AwtDpY1yZrllcPygx72mN3O8CAnV+Rpxw==}
     dev: false
@@ -1393,6 +1400,36 @@ packages:
         optional: true
     dependencies:
       '@radix-ui/react-slot': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@types/react': 18.3.3
+      '@types/react-dom': 18.3.0
+      react: 19.0.0-rc-107a2f8c3e-20240617
+      react-dom: 19.0.0-rc-107a2f8c3e-20240617(react@19.0.0-rc-107a2f8c3e-20240617)
+    dev: false
+
+  /@radix-ui/react-slider@1.2.0-rc.9(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-107a2f8c3e-20240617)(react@19.0.0-rc-107a2f8c3e-20240617):
+    resolution: {integrity: sha512-YBpWuyTpMtm0N82135izcbnLVNsITrZ9SK32LgIgvJRtCf9ve3U+BKIh/tT3+QFjIXTkdp5mnyybN2aJJtOgjg==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@radix-ui/number': 1.1.0-rc.6
+      '@radix-ui/primitive': 1.1.0-rc.6
+      '@radix-ui/react-collection': 1.1.0-rc.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-107a2f8c3e-20240617)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-compose-refs': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-context': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-direction': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-primitive': 2.0.0-rc.3(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@19.0.0-rc-107a2f8c3e-20240617)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-use-controllable-state': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-use-layout-effect': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-use-previous': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
+      '@radix-ui/react-use-size': 1.1.0-rc.6(@types/react@18.3.3)(react@19.0.0-rc-107a2f8c3e-20240617)
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
       react: 19.0.0-rc-107a2f8c3e-20240617

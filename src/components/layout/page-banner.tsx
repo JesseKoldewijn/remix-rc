@@ -1,5 +1,3 @@
-import React from "react";
-
 interface PageBannerProps {
   title: string | React.ReactNode;
   subtitle?: string;
